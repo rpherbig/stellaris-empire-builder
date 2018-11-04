@@ -6,7 +6,7 @@ class Content extends Component {
     return (
       <div className="Content">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Content area
         </p>
       </div>
     );
