@@ -4,13 +4,14 @@ import Header from './Header';
 import SidePanel from './SidePanel';
 import Content from './Content';
 import Footer from './Footer';
+import c from './constants';
 
 class App extends Component {
   render() {
     const navigation = {
-      "Species": ["Appearance", "Species Name", "Name Lists", "Traits"],
-      "Homeworld": ["Name & Class", "City Appearance"],
-      "Empire": ["Government & Ethics", "Advisor Voice", "Empire Name", "Flag", "Ship Appearance", "Ruler"],
+      [c.SPECIES]: [c.APPEARANCE, c.SPECIES_NAME, c.NAME_LISTS, c.TRAITS],
+      [c.HOMEWORLD]: [c.NAME_AND_CLASS, c.CITY_APPEARANCE],
+      [c.EMPIRE]: [c.GOVERNMENT_AND_ETHICS, c.ADVISOR_VOICE, c.EMPIRE_NAME, c.FLAG, c.SHIP_APPEARANCE, c.RULER],
     };
 
     return (
