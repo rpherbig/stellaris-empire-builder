@@ -1,9 +1,7 @@
 .SidePanel {
-  /*background: #33CCFF;*/
   width: 200px;
   float: left;
 
-  background-color: #282c34;
   min-height: 70vh;
   display: flex;
   flex-direction: column;
