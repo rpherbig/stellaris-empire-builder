@@ -7,6 +7,10 @@ import Footer from './Footer';
 import c from './constants';
 
 class App extends Component {
+  state = { activeContent: c.APPEARANCE };
+
+  clickHandler = item => () => this.setState({activeContent: item})
+
   render() {
     const navigation = {
       [c.SPECIES]: [c.APPEARANCE, c.SPECIES_NAME, c.NAME_LISTS, c.TRAITS],
@@ -17,8 +21,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <SidePanel navigation={navigation} />
-        <Content />
+        <SidePanel navigation={navigation} clickHandler={this.clickHandler} />
+        <Content active={this.state.activeContent} />
         <Footer />
       </div>
     );

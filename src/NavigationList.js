@@ -7,7 +7,7 @@ class NavigationList extends Component {
       <div className="NavigationList">
         <li className="NavigationHeader">{this.props.name}</li>
         {this.props.items.map(item =>
-          <li key={item}><button className="NavigationButton">{item}</button></li>
+          <li key={item}><button className="NavigationButton" onClick={this.props.clickHandler(item)}>{item}</button></li>
         )}
       </div>
     );

@@ -6,7 +6,7 @@ class Content extends Component {
     return (
       <div className="Content">
         <p>
-          Content area
+          Content area for {this.props.active}
         </p>
       </div>
     );

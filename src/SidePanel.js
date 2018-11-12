@@ -8,7 +8,7 @@ class SidePanel extends Component {
       <div className="SidePanel">
         <ul className="List">
           {Object.keys(this.props.navigation).map(key =>
-            <NavigationList key={key} name={key} items={this.props.navigation[key]} />
+            <NavigationList key={key} name={key} items={this.props.navigation[key]} clickHandler={this.props.clickHandler} />
           )}
         </ul>
       </div>
