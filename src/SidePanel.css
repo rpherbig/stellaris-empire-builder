@@ -10,6 +10,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
   border: 3px solid #FF00FF;
+  background-color: #111815;
+  opacity: 0.85;
 }
 
 .SidePanel > .List {
