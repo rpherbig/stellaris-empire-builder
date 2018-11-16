@@ -8,17 +8,3 @@
   color: white;
   border: 3px solid #FF6633;
 }
-
-.Header-logo {
-  animation: Header-logo-spin infinite 20s linear;
-  height: 20vmin;
-}
-
-@keyframes Header-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
