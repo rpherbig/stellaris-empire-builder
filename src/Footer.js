@@ -4,16 +4,32 @@ import './Footer.css';
 class Footer extends Component {
   render() {
     return (
-      <div className="Footer">
-        <a
+      <ul className="Footer">
+        <li><a
           className="Footer-link"
-          href="https://reactjs.org"
+          href="https://www.rpherbig.com/about/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-        </a>
-      </div>
+          Made by Robert Herbig
+        </a></li>
+        <li><a
+          className="Footer-link"
+          href="https://github.com/rpherbig/stellaris-empire-builder"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source available on GitHub
+        </a></li>
+        <li><a
+          className="Footer-link"
+          href="https://www.paradoxplaza.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Not affiliated in any way with Paradox Interactive (R)
+        </a></li>
+      </ul>
     );
   }
 }

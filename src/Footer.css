@@ -1,14 +1,21 @@
 .Footer {
   min-height: 10vh;
-  display: flex;
-  flex-direction: column;
+  display: table;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(4px + 2vmin);
   color: white;
   border: 3px solid #33FF66;
+  margin: 0;
 }
 
 .Footer-link {
   color: #61dafb;
+}
+
+.Footer > li {
+  display: table-cell;
+  width: 10%;  /* (100 / numItems)% */
+  text-align: center;
+  white-space: nowrap;
 }
