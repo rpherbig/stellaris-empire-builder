@@ -5,6 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header className="Header">
+        <p>Stellaris Empire Builder</p>
       </header>
     );
   }
