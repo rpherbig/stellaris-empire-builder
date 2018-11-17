@@ -7,6 +7,7 @@
   color: white;
   border: 3px solid #33FF66;
   margin: 0;
+  padding-inline-start: 0px;
 }
 
 .Footer-link {
