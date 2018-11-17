@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Content.css';
 import NavigableContent from './NavigableContent';
 
@@ -13,3 +14,7 @@ class Content extends Component {
 }
 
 export default Content;
+
+Content.propTypes = {
+  active: PropTypes.string.isRequired
+}

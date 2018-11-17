@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './NavigationList.css';
 
 class NavigationList extends Component {
@@ -17,3 +18,10 @@ class NavigationList extends Component {
 }
 
 export default NavigationList;
+
+NavigationList.propTypes = {
+  name: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+  active: PropTypes.string.isRequired
+}

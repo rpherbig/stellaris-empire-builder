@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './SidePanel.css';
 import NavigationList from './NavigationList';
 
@@ -17,3 +18,9 @@ class SidePanel extends Component {
 }
 
 export default SidePanel;
+
+SidePanel.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+  active: PropTypes.string.isRequired
+}

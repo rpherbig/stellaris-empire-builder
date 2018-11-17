@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './NavigableContent.css';
 
 class NavigableContent extends Component {
@@ -14,3 +15,7 @@ class NavigableContent extends Component {
 }
 
 export default NavigableContent;
+
+NavigableContent.propTypes = {
+  active: PropTypes.string.isRequired
+}
