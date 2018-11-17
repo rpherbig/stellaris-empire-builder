@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <SidePanel navigation={navigation} clickHandler={this.clickHandler} />
+        <SidePanel navigation={navigation} clickHandler={this.clickHandler} active={this.state.activeContent} />
         <Content active={this.state.activeContent} />
         <Footer />
       </div>
