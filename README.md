@@ -1,6 +1,8 @@
 ## Getting Started
 
-1. [Install NodeJS](https://nodejs.org/en/download/)
+1. If needed, [install NodeJS](https://nodejs.org/en/download/)
+1. If needed, [install Git for Windows](https://gitforwindows.org/)
+1. Clone the repo
 1. `cd ~/GitHub/stellaris-empire-builder`
 1. `npm i`
 
