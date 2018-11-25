@@ -7,7 +7,7 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <NavigableContent active={this.props.active}/>
+        <NavigableContent active={this.props.active} clickHandler={this.props.clickHandler}/>
       </div>
     );
   }
@@ -16,5 +16,6 @@ class Content extends Component {
 export default Content;
 
 Content.propTypes = {
-  active: PropTypes.string.isRequired
+  active: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired
 }

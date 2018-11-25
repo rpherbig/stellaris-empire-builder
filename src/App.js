@@ -7,9 +7,17 @@ import Footer from './Footer';
 import c from './constants';
 
 class App extends Component {
-  state = { activeContent: c.APPEARANCE };
+  navigationOrder = [c.APPEARANCE, c.SPECIES_NAME, c.NAME_LISTS, c.TRAITS, c.NAME_AND_CLASS, c.CITY_APPEARANCE, c.GOVERNMENT_AND_ETHICS, c.ADVISOR_VOICE, c.EMPIRE_NAME, c.FLAG, c.SHIP_APPEARANCE, c.RULER]
 
-  clickHandler = item => () => this.setState({activeContent: item})
+  state = { activeContent: this.navigationOrder[0] };
+
+  setActiveContent = item => () => this.setState({activeContent: item})
+
+  changeActiveContent = indexChange => () => {
+    const currentIndex = this.navigationOrder.findIndex(element => element === this.state.activeContent);
+    const newIndex = (currentIndex + indexChange) % this.navigationOrder.length;
+    this.setState({activeContent: this.navigationOrder[newIndex]});
+  }
 
   render() {
     const navigation = {
@@ -21,8 +29,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <SidePanel navigation={navigation} clickHandler={this.clickHandler} active={this.state.activeContent} />
-        <Content active={this.state.activeContent} />
+        <SidePanel navigation={navigation} clickHandler={this.setActiveContent} active={this.state.activeContent} />
+        <Content active={this.state.activeContent} clickHandler={this.changeActiveContent} />
         <Footer />
       </div>
     );
