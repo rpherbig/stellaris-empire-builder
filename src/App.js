@@ -9,7 +9,7 @@ import c from './constants';
 class App extends Component {
   navigationOrder = [c.APPEARANCE, c.SPECIES_NAME, c.NAME_LISTS, c.TRAITS, c.NAME_AND_CLASS, c.CITY_APPEARANCE, c.GOVERNMENT_AND_ETHICS, c.ADVISOR_VOICE, c.EMPIRE_NAME, c.FLAG, c.SHIP_APPEARANCE, c.RULER]
 
-  state = { activeContent: this.navigationOrder[0] };
+  state = { activeContent: this.navigationOrder[0], appearance: c.HUMANOID };
 
   setActiveContent = item => () => this.setState({activeContent: item})
 
@@ -18,6 +18,8 @@ class App extends Component {
     const newIndex = (currentIndex + indexChange) % this.navigationOrder.length;
     this.setState({activeContent: this.navigationOrder[newIndex]});
   }
+
+  setAppearance = appearance => () => this.setState({appearance})
 
   render() {
     const navigation = {
@@ -30,7 +32,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <SidePanel navigation={navigation} clickHandler={this.setActiveContent} active={this.state.activeContent} />
-        <Content active={this.state.activeContent} clickHandler={this.changeActiveContent} />
+        <Content active={this.state.activeContent} clickHandler={this.changeActiveContent} appearance={this.state.appearance} setAppearance={this.setAppearance} />
         <Footer />
       </div>
     );

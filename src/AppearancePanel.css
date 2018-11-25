@@ -1,0 +1,23 @@
+.AppearancePanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border: 3px solid #FF00FF;
+}
+
+.AppearancePanel > .List {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.AppearanceButton {
+  display: block;
+  width: 100%;
+}
+
+.Active {
+  background-color:red;
+}
